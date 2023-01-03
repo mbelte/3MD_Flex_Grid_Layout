@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: ['./src/scripts.ts', './src/styles.scss'],
+  entry: ['./src/scripts.ts', './src/styles.scss', './src/styles-grid.scss'],
   mode: 'development',
   devServer: {
     port: 3000,
@@ -39,11 +39,19 @@ module.exports = {
       },
     ],
   },
-  plugins: [new HtmlWebpackPlugin({
-    template: 'src/index.html',
-    favicon: 'favicon.png',
-    chunks: [],
-  }),
+  plugins: [
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: 'src/index.html',
+      favicon: 'favicon.png',
+      chunks: ['main'],
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'grid.html',
+      template: 'src/grid.html',
+      favicon: 'favicon.png',
+      chunks: ['grid'],
+    }),
   new CopyPlugin({
     patterns: [
       {
