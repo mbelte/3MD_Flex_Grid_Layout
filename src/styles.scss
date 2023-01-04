@@ -57,6 +57,12 @@ textarea,
 select {
   font: inherit;
 }
+a {
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-decoration: inherit;
+}
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
@@ -74,8 +80,326 @@ select {
   }
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;900&display=swap');
+
+$font-size-18: clamp(1.00rem, calc(0.91rem + 0.38vw), 1.13rem); /*  18 - 16 */
+$font-size-20: clamp(1.00rem, calc(0.82rem + 0.77vw), 1.25rem); /*  20 - 16 */
+$font-size-22: clamp(1.13rem, calc(0.94rem + 0.77vw), 1.38rem); /*  22 - 18 */
+$font-size-26: clamp(1.38rem, calc(1.19rem + 0.77vw), 1.63rem); /*  26 - 22  */
+$font-size-30: clamp(1.50rem, calc(2.15rem + -1.15vw), 1.88rem); /* 30 - 24 */
+$font-size-44: clamp(2.00rem, calc(1.45rem + 2.31vw), 2.75rem); /*  44 - 32  */
+
+$dark-gray: #21243D;
+$light-gray: #8695A4;
+$orange: #FF6464;
+$black: #000;
+$white: #fff;
+
 body {
-    background-color: #fff;
+  color: $dark-gray;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 400;
+  line-height: 24px;
 }
 
+.nav-wrap {
+  display: flex;
+  justify-content: flex-end;
+  gap: 33px;
+  padding: 30px 60px 0 0;
+}
+.main-nav {
+  display: flex;
+  gap: 33px;
 
+  &__item {
+    color: $black;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: capitalize;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+}
+
+.container {
+  max-width: 858px;
+  padding: 0 18px;
+}
+.hero-header-wrap {
+  display: flex;
+  justify-content: center;
+  padding-top: clamp(30px, 5vw, 150px);
+}
+.hero-header {
+  display: flex;
+  gap: clamp(34px, 8vw, 115px);
+  align-items: center;
+
+  &__heading {
+    font-size: $font-size-44;
+    font-weight: 700;
+    line-height: 60px;
+  }
+
+  &__text {
+    max-width: 500px;
+  }
+
+  &__description {
+    padding: 40px 0;
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    width: 243px;
+  }
+}
+
+.btn-main {
+  background-color: $orange;
+  border-radius: 2px;
+  color: $white;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  padding: 14px 22px;
+  text-decoration: none;
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, 
+                rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  }
+}
+
+.main-content {
+  padding: 70px 0 80px 0;
+}
+.recent-posts-wrap {
+  background-image: url('/assets/images/bg.jpg');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+
+.section-title {
+  color: $dark-gray;
+  font-size: $font-size-22;
+  font-weight: 400;
+  line-height: 60px;
+
+  &--white {
+    color: $dark-gray;
+    font-size: $font-size-22;
+    line-height: 60px;
+    color: $white;
+  }
+}
+.recent-posts {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 858px;
+  padding-bottom: 32px;
+}
+.post-preview {
+  background-color: #fff;
+  border-radius: 4px;
+  max-width: 418px;
+  min-width: 354px;
+  padding: 24px;
+
+  &__header {
+    padding-bottom: 11px;
+  }
+
+  &__heading {
+    font-size: $font-size-26;
+    font-weight: 700;
+    line-height: 38px;
+    padding-bottom: 17px;
+  }
+
+  &__info {
+    font-size: $font-size-18;
+    line-height: 26px;
+
+    & span {
+      display: inline-block;
+
+      &:not(:last-child) {
+        border-right: 1px solid #000;
+        padding-right: 20px;
+      }
+  
+      &:not(:first-child) {
+        padding-left: 20px;
+      }
+    }
+  }
+}
+
+.earlier-posts {
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+}
+
+.post-preview-full {
+  border-bottom: 1px solid #E0E0E0;
+  display: flex;
+  gap: 18px;
+  padding: 30px 0 15px 0;
+
+  &__thumbnail {
+    max-width: 246px;
+    flex: 1;
+
+    & img {
+      border-radius: 6px;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    max-width: 594px;
+    flex: 1;
+  }
+
+  &__heading {
+    font-size: $font-size-30;
+    font-weight: 700;
+    line-height: 28px;
+  }
+
+  &__info {
+    color: $light-gray;
+    font-size: $font-size-20;
+    line-height: 29px;
+    padding: 18px 0;
+  }
+
+  &__year {
+    background-color: #142850;
+    border-radius: 16px;
+    display: inline-flex;
+    color: $white;
+    font-size: $font-size-18;
+    font-weight: 900;
+    line-height: 26px;
+    margin-right: 26px;
+    padding: 0 10px;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0;
+}
+.copyrights {
+  font-size: 14px;
+  padding-top: 26px;
+}
+
+.social-links {
+  display: inline-flex;
+  justify-content: center;
+  gap: 35px;
+
+  &__icon {
+    background-size: cover;
+    display: block;
+    height: 30px;
+    width: 30px;
+
+    &--fb {
+      background-image: url('/assets/images/fb.png');
+    }
+
+    &--insta {
+      background-image: url('/assets/images/insta.png');
+    }
+
+    &--twitter {
+      background-image: url('/assets/images/twitter.png');
+      width: 37px;
+    }
+
+    &--linkedin {
+      background-image: url('/assets/images/linkedin.png');
+    }
+  }
+}
+
+@media screen and (max-width: 580px) {
+
+  .section-title {
+    text-align: center;
+  }
+
+  .post-preview-full {
+    align-items: center;
+    flex-direction: column;
+
+    &__thumbnail {
+      max-width: 544px;
+      flex: 1;
+  
+      & img {
+        border-radius: 6px;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  
+    &__content {
+      max-width: 594px;
+      min-width: 344px;
+      flex: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+
+  .hero-header {
+    flex-direction: column-reverse;
+    text-align: center;
+
+    &__heading {
+      line-height: 40px;
+      padding: 0 14px;
+    }
+
+    &__description {
+      padding: 24px 6px;
+    }
+
+    &__icon {
+      flex-shrink: 1;
+      width: 170px;
+    }
+  }
+
+  .header-btn {
+    display: flex;
+    justify-content: center;
+  }
+
+  .section-title--white {
+    text-align: center;
+  }
+
+  .recent-posts {
+    flex-direction: column;
+  }
+}

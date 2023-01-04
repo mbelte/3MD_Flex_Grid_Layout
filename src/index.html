@@ -7,13 +7,237 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="/styles.css">
-    <title>Document</title>
+    <title>John's blog</title>
 </head>
 <body>
-    <h1>
-        Hello World
-    </h1>
-    <img src="/assets/images/cat.jpeg" alt="" width="300">
+    
+<!--    Main navigation  -->
+    <div class="nav-wrap">
+        <nav class="main-nav">
+            
+            <a href="#" class="main-nav__item">
+                works
+            </a>
+            <a href="#" class="main-nav__item">
+                blog
+            </a>
+            <a href="#" class="main-nav__item">
+                contact
+            </a>
+        </nav>
+    </div>
+
+<!--  Main header  -->
+    <div class="hero-header-wrap">
+        <div class="container">
+            <div class="hero-header">
+                <div class="hero-header__text">
+                    <h1 class="hero-header__heading">
+                        Hi, I am John, <br>
+                        Creative Technologist
+                    </h1>
+                    <p class="hero-header__description">
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
+                        Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                    </p>
+                </div>
+                
+                <div class="hero-header__icon">
+                    <img src="/assets/images/profile-pic.png" alt="Image">
+                </div>
+            </div>
+
+            <div class="header-btn">
+                <a href="#" class="btn-main">
+                    Download Resume
+                </a>
+            </div>
+        </div>
+    </div>
+    
+<!--    Main content    -->
+    <main class="main-content">
+
+    <!--    Recent posts    -->
+        <div class="recent-posts-wrap">
+            <div class="container">
+
+                <div class="section-title--white">
+                    Recent posts
+                </div>
+
+                <div class="recent-posts">
+                    <article class="post-preview">
+                        <header class="post-preview__header">
+                            <h3 class="post-preview__heading">
+                                Making a design system from scratch
+                            </h3>
+                            <div class="post-preview__info">
+                                <span>
+                                    12 Feb 2020
+                                </span>
+                                <span>
+                                    Design, Pattern
+                                </span>
+                            </div>
+                        </header>
+                        <p class="post-preview__text">
+                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
+                            Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                        </p>
+                    </article>
+
+                    <article class="post-preview">
+                        <header class="post-preview__header">
+                            <h3 class="post-preview__heading">
+                                Creating pixel perfect icons in Figma
+                            </h3>
+                            <div class="post-preview__info">
+                                <span>
+                                    12 Feb 2020
+                                </span>
+                                <span>
+                                    Figma, Icon Design
+                                </span>
+                            </div>
+                        </header>
+                        <p class="post-preview__text">
+                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
+                            Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+<!--    Earlier posts  -->
+        <div class="earlier-posts">
+            <div class="container">
+                <div class="section-title">
+                    Featured works
+                </div>
+
+                <article class="post-preview-full">
+                    <div class="post-preview-full__thumbnail">
+                        <img src="/assets/images/grid.jpg" alt="Title">
+                    </div>
+                    
+                    <div class="post-preview-full__content">
+                        <header class="post-preview-full__header">
+                            <h2 class="post-preview-full__heading">
+                                <a href="/grid.html">
+                                    Created Grid Layout
+                                </a>
+                            </h2>
+                            <div class="post-preview-full__info">
+                                <span class="post-preview-full__year">
+                                    2023
+                                </span>
+                                <span>
+                                    Codelex
+                                </span>
+                            </div>
+                        </header>
+                        <p class="post-preview-full__text">
+                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
+                            Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="post-preview-full">
+                    <div class="post-preview-full__thumbnail">
+                        <img src="/assets/images/article-1.png" alt="Title">
+                    </div>
+                    
+                    <div class="post-preview-full__content">
+                        <header class="post-preview-full__header">
+                            <h2 class="post-preview-full__heading">
+                                Designing Dashboards
+                            </h2>
+                            <div class="post-preview-full__info">
+                                <span class="post-preview-full__year">
+                                    2020
+                                </span>
+                                <span>
+                                    Dashboard
+                                </span>
+                            </div>
+                        </header>
+                        <p class="post-preview-full__text">
+                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
+                            Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="post-preview-full">
+                    <div class="post-preview-full__thumbnail">
+                        <img src="/assets/images/article-2.png" alt="Title">
+                    </div>
+                    
+                    <div class="post-preview-full__content">
+                        <header class="post-preview-full__header">
+                            <h2 class="post-preview-full__heading">
+                                Vibrant Portraits of 2020
+                            </h2>
+                            <div class="post-preview-full__info">
+                                <span class="post-preview-full__year">
+                                    2018
+                                </span>
+                                <span>
+                                    Illustration
+                                </span>
+                            </div>
+                        </header>
+                        <p class="post-preview-full__text">
+                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
+                            Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="post-preview-full">
+                    <div class="post-preview-full__thumbnail">
+                        <img src="/assets/images/article-3.png" alt="Title">
+                    </div>
+                    
+                    <div class="post-preview-full__content">
+                        <header class="post-preview-full__header">
+                            <h2 class="post-preview-full__heading">
+                                36 Days of Malayalam type
+                            </h2>
+                            <div class="post-preview-full__info">
+                                <span class="post-preview-full__year">
+                                    2018
+                                </span>
+                                <span>
+                                    Typography
+                                </span>
+                            </div>
+                        </header>
+                        <p class="post-preview-full__text">
+                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
+                            Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+<!--    Footer  -->
+    <footer class="footer">
+        <div class="social-links">
+            <a href="#" class="social-links__icon social-links__icon--fb"></a>
+            <a href="#" class="social-links__icon social-links__icon--insta"></a>
+            <a href="#" class="social-links__icon social-links__icon--twitter"></a>
+            <a href="#" class="social-links__icon social-links__icon social-links__icon--linkedin"></a>
+        </div>
+        <div class="copyrights">
+            Copyright ©2020 All rights reserved 
+        </div>
+    </footer>
 
 
     <script src="/scripts.js"></script>
