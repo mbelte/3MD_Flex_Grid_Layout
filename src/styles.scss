@@ -123,6 +123,10 @@ body {
       color: $orange;
     }
   }
+
+  &__btn {
+    display: none;
+  }
 }
 
 .container {
@@ -340,6 +344,102 @@ body {
 }
 
 @media screen and (max-width: 580px) {
+
+  .nav-wrap {
+    background-color: $white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+  }
+
+  .main-nav {
+    flex-direction: column;
+    gap: 28px;
+    align-items: center;
+
+    background-color: $orange;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    padding-top: 14vh;
+    transition-duration: .25s;
+
+    &__btn {
+      display: block;
+      cursor: pointer;
+      position: fixed;
+      top: 20px;
+      right: 18px;
+      width: 30px;
+      height: 24px;
+      z-index: 1;
+
+      & > input {
+        cursor: pointer;
+        opacity: 0;
+        width: 22px;
+        height: 16px;
+      }
+    }
+
+    &__btn-bars,
+    &__btn-bars::before,
+    &__btn-bars::after {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: $dark-gray;
+      transition-duration: .25s;
+      position: absolute;
+    }
+    &__btn-bars {
+      top: 11px;
+
+      &::before {
+        content: "";
+        top: -8px;
+      }
+
+      &::after {
+        content: "";
+        top: 8px;
+      }
+    }
+
+    &:has(.main-nav__toggle:checked) {
+      right: 0;
+    }
+
+    &__item {
+      color: $white;
+      font-size: $font-size-30;
+    }
+  }
+
+  .main-nav__toggle:checked {
+    & + .main-nav__btn-bars {
+      background-color: $white;
+      transform: rotate(45deg);
+    }
+    & + .main-nav__btn-bars::before {
+      background-color: $white;
+      top: 0;
+      transform: rotate(0deg);
+    }
+    & + .main-nav__btn-bars::after {
+      background-color: $white;
+      top: 0;
+      transform: rotate(90deg);
+    }
+  }
+
+  .hero-header-wrap {
+    padding-top: 60px;
+  }
 
   .section-title {
     text-align: center;
